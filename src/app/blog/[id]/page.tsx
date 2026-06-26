@@ -7,7 +7,7 @@ import { notFound } from "next/navigation";
 import DOMPurify from 'isomorphic-dompurify'
 import Link from "next/link";
 import EditRouteButton from "./EditRouteButton";
-import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+
 
 type Props = {
   params: Promise<{ id: string }>
@@ -15,13 +15,6 @@ type Props = {
 
 const BlogPage = async ({ params }: Props) => {
 
-  const { isAuthenticated } = getKindeServerSession()
-
-  const isAuth = await isAuthenticated()
-
-  if (!isAuth) {
-    return notFound()
-  }
 
   const { id } = await params;
 
