@@ -20,6 +20,8 @@ export default function Home() {
     { src: "https://4uq7g3y1c9.ufs.sh/f/papAmzoxRga88074L6l6bHPsW4yEjtCD2iZNK0AhLYw7OmJg", alt: "Brand 6" },
   ]
 
+  console.log(process.env.NEXT_PUBLIC_TEST)
+
   return (
     <main className="font-content">
       <HeroCarousel />
